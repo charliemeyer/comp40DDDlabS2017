@@ -1,16 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define LIMIT 10
+#include "linkedlist.h"
 
 typedef struct Node {
         int data;
         struct Node* next;
 } Node;
 
-typedef Node* List; 
-
-List newNode(int x)
+LinkedList newNode(int x)
 {
         List xs = malloc(sizeof(*xs));
 
@@ -20,13 +18,13 @@ List newNode(int x)
         return xs;
 }
 
-List makeList()
+LinkedList makeList(int n)
 {
         List xs = newNode(0), next;
 
         next = xs;
 
-        for (int i = 1; i < LIMIT; i++) {
+        for (int i = 1; i < n; i++) {
                 next->next = newNode(i);
                 next = next->next;
         }
@@ -34,16 +32,16 @@ List makeList()
         return xs;
 }
 
-void printList(List xs)
+void printList(LinkedList xs)
 {
-        for (List next = xs; next; next = next->next) {
+        for (LinkedList next = xs; next; next = next->next) {
                 printf("%d\n", next->data);
-        }   
+        }       
 }
 
-void freeList(List xs)
+void freeList(LinkedList xs)
 {
-        List next;
+        LinkedList next;
 
         while (xs) {
                 next = xs->next;
@@ -51,15 +49,4 @@ void freeList(List xs)
                 xs = next;
         }
 
-}
-
-int main()
-{
-        List xs = makeList();
-
-        printList(xs);
-
-        freeList(xs);
-
-        return 0;
 }

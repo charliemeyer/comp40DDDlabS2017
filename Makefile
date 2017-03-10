@@ -6,7 +6,7 @@ all: list loop
 
 loop: loop.c
 
-list: list-main.o list.o list.h 
+list: list-main.o linkedlist.o linkedlist.h 
 
 clean:
 	rm loop list *.o

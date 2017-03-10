@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#include "list.h"
+#include "linkedlist.h"
 
 int main(int argc, char* argv[])
 {
@@ -11,7 +11,7 @@ int main(int argc, char* argv[])
                 limit = strtol(argv[1], NULL, 10);
         }
 
-        List xs = makeList(limit);
+        LinkedList xs = makeList(limit);
 
         printList(xs);
 
