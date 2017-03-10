@@ -8,7 +8,7 @@ all: linkedlist loop
 
 loop: loop.c
 
-linkedlist: list-main.o linkedlist.o 
+linkedlist: list-main.o linkedlist.o linkedlist.h
 
 clean:
 	rm loop linkedlist *.o
