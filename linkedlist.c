@@ -10,7 +10,7 @@ typedef struct Node {
 
 LinkedList newNode(int x)
 {
-        List xs = malloc(sizeof(*xs));
+        LinkedList xs = malloc(sizeof(*xs));
 
         xs->data = x;
         xs->next = NULL;
@@ -20,7 +20,7 @@ LinkedList newNode(int x)
 
 LinkedList makeList(int n)
 {
-        List xs = newNode(0), next;
+        LinkedList xs = newNode(0), next;
 
         next = xs;
 
