@@ -2,11 +2,11 @@
 
 CFLAGS := -g -std=c99 -Wall -Wextra -Werror -Wfatal-errors
 
-all: list loop
+all: linkedlist loop
 
 loop: loop.c
 
-list: list-main.o linkedlist.o linkedlist.h 
+linkedlist: list-main.o linkedlist.o linkedlist.h 
 
 clean:
-	rm loop list *.o
+	rm loop linkedlist *.o
