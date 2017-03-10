@@ -1,0 +1,533 @@
+
+/*   CSS style create by Mark A. Sheldon for Spring 2008
+ *   for Wellesley's CS111.
+ *   Modified for Olin's FOCS course, Spring 2009
+ *   Used for Olin courses through Spring 2011
+ *   Adopted for UMass/Lowell courses Fall 2011
+ *
+ *   Modified by Noah Mendelsohn 2013/2014 for Tufts COMP 40
+ */
+
+/* used to mark things that need attention before the
+   Web site is ready for student use */
+.needswork {
+    font-weight:bold;
+    color:magenta;
+    text-transform:uppercase;
+}
+
+/* Hilighting for anything that needs to stand out */
+
+.hilite {
+    color:blue;
+    font-weight:bold;
+}
+
+/* Superscripts */
+
+.superscript {
+        vertical-align: super;
+    font-size:smaller;
+    
+}
+
+.warningdiv {
+    float:right;
+    color:darkgreen;
+    font-size:80%;
+    margin-top:0em;
+    padding-top:0em;
+}
+
+/*
+ *
+ *   Mark's style
+ *
+ *   Each page has a header with the course logo on the left
+ *   and a title on the right.  The main text comes below.
+ *   
+ *   +--------+---------------------------------+
+ *   |        |                                 |
+ *   | logo   |   topcontent (title)            |
+ *   |        |                                 |
+ *   +--------+---------------------------------+
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |            maincontent                   |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   +------------------------------------------+
+ *   |                                          |
+ *   | dogtag                                   |
+ *   |                                          |
+ *   +------------------------------------------+
+ *
+ *
+ *   The logo and topcontent divs are wrapped in a div called
+ *   "topmatter".
+ *
+ *   Noah's style
+ *
+ *   Each page has a header with the course logo on the left
+ *   and a title on the right.  The main text comes below.
+ *   
+ *   +------------------------------------------+
+ *   |                                          |
+ *   |          pretopmatter (course name)      |
+ *   |                                          |
+ *   +--------+---------------------------------+
+ *   |        |                                 |
+ *   | logo   |   topcontent (title)            |
+ *   |        |                                 |
+ *   +--------+---------------------------------+
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |            maincontent                   |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   |                                          |
+ *   +------------------------------------------+
+ *   |                                          |
+ *   | dogtag                                   |
+ *   |                                          |
+ *   +------------------------------------------+
+ *
+ *
+ *   The logo and topcontent divs are wrapped in a div called
+ *   "topmatter".
+ *
+ *   For some reason, things don't work well at all in IE on the 
+ *   Mac.  I haven't tested it on PCs.
+ *
+ *   The FOCS logo (a wimpy one) is 85px wide and 58px tall.
+ */
+
+body
+{
+     margin-left:auto; 
+     margin-right:auto; 
+     margin-bottom:2em;
+     padding: 2px 1em 0px 1em;
+     max-width:45em;   
+     /* Try a new color */
+/*     background-color: #E3E3E3;  #E5E5FF; #E9EFF4; #F0F0F0; #CCCCE5; */
+/*      background-color: #FFF8F8; */
+     background-color: #FEFEFE;
+     font-family: helvetica, georgia, verdana, sans-serif;
+}
+
+body.calendar {
+     max-width:none;
+     margin-left:1em;
+     margin-right:1em;
+}
+
+h1
+{
+     text-align:center;
+     margin-bottom:15px;
+}
+
+h3
+{
+    font-style:italic;
+}
+
+/*
+ * For Noah's style, the PHP generates this ahead
+ * of the main topmatter...it usually carries
+ * the course name for main pages.
+ */
+div#pretopmatter
+{
+     /* Commented for Noah's no logo style
+     /* min-height:  140px;  /* height of logo */
+     /* width: 56em;  */
+     padding: 0px 0px 15px 0px; 
+     background-color: #EDEDED;
+     border:solid;
+     width: 100%;
+     height: 2em;
+     text-align: center;
+     vertical-align: middle;
+  }
+
+div#pretopmatter p
+{
+     font-size:150%;
+     line-height: 2.0em; /* same as div to center */
+     font-weight:bold;
+     margin:0em;
+}
+
+#topmatter
+{
+     /* Commented for Noah's no logo style
+     /* min-height:  140px;  /* height of logo */
+     /* width: 56em;  */
+     padding: 0px 0px 15px 0px; 
+}
+
+/*
+ *  Mark's logo styles
+ */
+#logo
+{
+     background:        url("logo.gif");
+     background-repeat: no-repeat;
+     height:            140px;
+     width:             200px;
+     float:             left;
+     margin:      0px 2em 0.5em 0px; 
+}
+
+#logo:hover
+{
+       cursor: pointer;
+       background-color: #E0E0E0;
+}
+
+
+/*
+ *  Noah's experimental logo styles (not used as of Jan 2014
+ *  but kept here in case we want them later)
+ */
+#noahlogo
+{
+     background:        url("DSC_2261_140L.gif"); 
+/*     background-repeat: no-repeat; */
+     background-repeat: repeat;
+     background-size: 100%;
+     height:            100px;
+/*     width:             200px;  */
+/*     float:             left;  */
+     margin:      0px 2em 0.5em 0px; 
+}
+
+#noahlogo:hover
+{
+       cursor: pointer;
+       background-color: #E0E0E0;
+}
+
+
+#topcontent
+{
+     vertical-align: middle;
+/*     margin-left: 30px; */
+/*     min-height: 140px; */ /* match height of logo */
+       margin-top:0.4em;
+       margin-bottom:0.8em;
+}
+
+#menubar
+{
+/*     position: fixed; */
+      max-width:       95%; 
+     margin-left:auto; 
+     margin-right:auto; 
+     margin-bottom:0.5em;
+     width:fit-content; /* CSS 3 extension may not work */
+     border-top:    thin solid #000000;
+     border-left: thin solid #000000;
+     border-right: thin solid #000000;
+     border-bottom: thin solid #000000;
+     /* background-color: #E0E0E0; */
+/*     padding-left:   230px; */
+     font-size: 140%;
+     /* set min-width to right thing */
+}
+
+#menubar p {
+    margin:0px 0px 0px 0px;
+        text-align:center;
+}
+
+#menubar a.menu_item
+{
+     color: #909090;
+     margin-right: 20px;
+     padding-left: 3px;
+     padding-right: 3px;
+     text-decoration: none;
+     border: none;
+}
+
+#menubar .here 
+{ 
+     margin-right: 20px;
+     padding-left: 3px;
+     padding-right: 3px;
+     border-left: thin solid #404040;
+     border-right: thin solid #404040;
+     background-color: #E0E0E0; 
+}
+
+
+#menubar a.menu_item:visited
+{
+     color: #909090;
+     border: none;
+}
+
+#menubar a.menu_item:hover
+{
+/*     background-color: #E0E0E0; */
+     color: blue;
+}
+
+
+#maincontent
+{
+     /*font-size: large; */
+/*     border-bottom: thin solid #000000; */
+/*     padding-top: 5ex; */ /*1.5ex;*/ 
+     padding-left: 1.5ex;
+}
+
+.navlist
+{
+     list-style-type: none;
+}
+
+.navlist a
+{
+     color: #808080;  /* Grey */
+     font-weight: bold;
+}
+
+.navlist a:hover
+{
+     color: #0C0C0C;   /*maroon;*/
+}
+
+a
+{
+    color: blue;
+}
+
+a:visited
+{
+     color: #000099;
+}
+
+.code
+{
+     color: #990066;
+     font-family: fixed;
+}
+
+.code:visited
+{
+     color: #550022;
+}
+
+.plain_text
+{
+     max-width: 40em; /*46em;*/ /*650px;*/
+     text-align: left;
+}
+
+#dogtag
+{
+     border-top: thin solid #000000;
+     margin-top: 20px;
+     margin-bottom: 10px;
+     position: relative;
+     right: 0px;
+     font-size: x-small;
+}
+
+#screen
+{
+    position:  fixed;
+    /*bottom:    0%; */
+    top:         50%;
+    height:      50%;
+    background:  #000000; 
+    width:       100%;
+    border:      1px;
+    z-index:     100;
+    visibility:  hidden;
+}
+
+#draw_screen
+{
+    position:  fixed;
+    top:       2%;
+    right:     2%;
+    float:     right;
+}
+
+table
+{
+     border-collapse: collapse;
+}
+
+table th
+{
+     padding: 0.5em;
+}
+
+table td
+{
+     padding: 0.5em;
+}
+
+.due
+{
+     color: red;
+}
+
+a.due:visited
+{
+     color: maroon;
+}
+
+a.code
+{
+     font-family: courier, fixed;
+}
+
+iframe
+{
+     background-color: #E0E0F0;
+}
+
+.notabene
+{
+     clear: left;
+     border: thin solid #000000;
+     margin-left: 5em;
+     margin-right: 5em;
+     padding-left: 5px;
+     padding-right: 5px;
+     padding-top: 1ex;
+}
+
+.church
+{
+     border-top:  thin solid #000000;
+}
+
+.quote_sig
+{
+     margin-top: 0.5ex;
+     margin-left: 24em;
+     /*text-align: right;*/
+}
+
+.answer
+{
+     color: purple;
+}
+
+
+/*
+ * Navigation (table of contents) lists at tops of pages
+ *
+ * Mark Sheldon had this as inline style, Noah moved to style sheet.
+ */
+
+table.navlist td
+{
+/*  spacing:  0; */ /*  not valid css */ 
+        padding:  0 1.5em 1ex 0;
+}   
+
+/* -------------------------------------------------------------
+
+                  Lists
+ 
+      Added by Noah M. Jan 22, 2014
+
+   ------------------------------------------------------------- */
+
+/* Put some vertical space between list items */
+li
+{
+        margin-top:0.5em;
+}
+
+
+/* -------------------------------------------------------------
+
+                 Table of Contents
+
+   ------------------------------------------------------------- */
+
+div.toc ol {
+    margin-top:0em;
+    margin-left:2em;
+
+}
+
+div.toc ol li {
+    text-decoration:none;
+    font-size:105%;
+}
+
+div.toc ol li a {
+    text-decoration:none;
+}
+
+div.toc ol li a:hover {
+    text-decoration:underline;
+    background:#EEE;
+}
+
+div.toc ol li ol  {
+    margin-left:0em;
+
+}
+
+div.toc ol li ol li {
+    line-height:1em;
+    margin-top:0em;
+    font-size:95%;
+}
+
+
+
+/* -------------------------------------------------------------
+
+                 White papers and homework
+
+     Use smaller fonts appropriate to longer written documents
+
+   ------------------------------------------------------------- */
+
+/* Note: the main content section of homework is also traditionally
+   class "plain-text"...so that should have priority over
+   styles from .homework */
+
+.whitepaper, .homework {
+   font-family:arial;
+   font-size:90%
+}
+.whitepaper pre, .homework pre {margin-left:2em; margin-bottom:em; font-size:125%}
+
+.whitepaper .toc, .homework .toc {font-size:110%}
+
+.whitepaper .emph, .homework .emph {font-weight:bold}
+
+.homework h2 {
+/*    text-decoration: underline;  */
+    border:solid; 
+    text-align:center;
+    padding:0.2em;
+    
+}
+
+code {font-size:110%}
+
+
